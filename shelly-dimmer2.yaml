@@ -36,7 +36,7 @@ substitutions:
   # Project Substitutions (not intended for user substitution)
   device_model: "Dimmer2"
   device_make: "Shelly"
-  package_version: "2024.2.14"
+  package_version: "2024.8.01"
   package_url: "github://Marsupilami23/esphometemplates/shelly-dimmer2.yaml@main"
 
 # Allow importing this package
