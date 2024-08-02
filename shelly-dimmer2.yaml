@@ -8,8 +8,8 @@
 substitutions:
   # Required import substitutions
   device_site: "home"
-  device_location_code: "bedroom01"
-  device_location_name: "Bedroom 1"
+  device_location_code: "front_yard"
+  device_location_name: "Front Yard"
   device_type_code: "dimr"
   device_type_name: "Dimmer"
   device_number: "089"
@@ -37,7 +37,7 @@ substitutions:
   device_model: "Dimmer2"
   device_make: "Shelly"
   package_version: "2024.2.14"
-  package_url: "github://mariodivece/esphometemplates/shelly-dimmer2.yaml@main"
+  package_url: "github://Marsupilami23/esphometemplates/shelly-dimmer2.yaml@main"
 
 # Allow importing this package
 dashboard_import:
@@ -47,7 +47,7 @@ dashboard_import:
 # Import packages
 packages:
   standard_package:
-    url: https://github.com/mariodivece/esphometemplates/
+    url: https://github.com/Marsupilami23/esphometemplates/
     ref: main
     refresh: 0d
     files:
@@ -55,7 +55,7 @@ packages:
       - standard/diagnostics.yaml
       - standard/wifi.yaml
   shelly_package:
-    url: https://github.com/mariodivece/esphometemplates/
+    url: https://github.com/Marsupilami23/esphometemplates/
     ref: main
     refresh: 0d
     files:
