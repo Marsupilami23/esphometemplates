@@ -21,9 +21,9 @@ substitutions:
   dimmer_warmup_level: "250" # from 0 to 1000
   dimmer_gamma_correct: "0.0" # 2.8 is the default. 0.0 means linear (LEDs)
   dimmer_leading_edge: "false" # False for LEDs
-  dimmer_stmfw_update: "false" # Automatically update the STM32 FW (not reversible as of today)
+  dimmer_stmfw_update: "true" # Automatically update the STM32 FW (not reversible as of today)
   dimmer_stmfw_version: "51.6" # Can use 51.7 (removes neutral line support but reduces flickering)
-  dimmer_max_temp: "70" # (in °C) # For over-temperature protection
+  dimmer_max_temp: "95" # (in °C) # For over-temperature protection
   dimmer_max_current: "1.0" # (in A) Rated for 1.1 Amp
   dimmer_max_power: "190" # (in W) Rated for 220W
 
