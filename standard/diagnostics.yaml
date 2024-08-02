@@ -6,6 +6,14 @@ substitutions:
   log_level: INFO
   timezone: "America/Los_Angeles"
 
+esphome:
+  includes:
+  - esp_heap_caps.h
+
+globals:
+  - uint32_t MALLOC_CAP_INTERNAL = 2;
+  - uint32_t (*heap_caps_get_free_size)(uint32_t) = &heap_cap_get_free_size;
+  
 # Enable logging via network and disable serial port
 logger:
   level: "${log_level}"
