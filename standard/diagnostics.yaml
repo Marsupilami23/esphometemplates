@@ -7,9 +7,9 @@ substitutions:
   timezone: "America/Los_Angeles"
 
 # Enable logging via network and disable serial port
-#logger:
+logger:
 #  level: "${log_level}"
-#  baud_rate: 0
+  baud_rate: 0
 
 # Provide date and time
 time:
