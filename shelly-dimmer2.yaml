@@ -8,11 +8,11 @@
 substitutions:
   # Required import substitutions
   device_site: "home"
-  device_location_code: "front_yard"
+  device_location_code: "front-yard"
   device_location_name: "Front Yard"
   device_type_code: "dimr"
   device_type_name: "Dimmer"
-  device_number: "089"
+  device_number: "001"
   device_ip: "0.0.0.0"
 
   # Optional, device-specific substitutions
