@@ -41,44 +41,44 @@ binary_sensor:
     id: sensor_status
     disabled_by_default: true
 
-sensor:
+#sensor:
     # Device Memory
-  - platform: template
-    id: esp_memory
-    icon: mdi:memory
-    name: Free Memory
-    lambda: return heap_caps_get_free_size(MALLOC_CAP_INTERNAL) / 1024;
-    unit_of_measurement: "kB"
-    state_class: measurement
-    entity_category: "diagnostic"
-    disabled_by_default: true
+#  - platform: template
+#    id: esp_memory
+#    icon: mdi:memory
+#    name: Free Memory
+#    lambda: return heap_caps_get_free_size(MALLOC_CAP_INTERNAL) / 1024;
+#    unit_of_measurement: "kB"
+#    state_class: measurement
+#    entity_category: "diagnostic"
+#   disabled_by_default: true
 
   # Captures the uptime and updates the human-readable
   # text sensor displayed. This is an internal sensor only.
-  - platform: uptime
-    name: "Uptime"
-    id: sensor_uptime
-    update_interval: 60s
-    entity_category: "diagnostic"
-    internal: true
-    on_raw_value:
-      then:
-        - text_sensor.template.publish:
-            id: uptime_human
-            state: !lambda |-
-              int seconds = round(id(sensor_uptime).raw_state);
-              int days = seconds / (24 * 3600);
-              seconds = seconds % (24 * 3600);
-              int hours = seconds / 3600;
-              seconds = seconds % 3600;
-              int minutes = seconds /  60;
-              seconds = seconds % 60;
-              return (
-                (days ? String(days) + "d " : "") +
-                (hours ? String(hours) + "h " : "") +
-                (minutes ? String(minutes) + "m " : "") +
-                (String(seconds) + "s")
-              ).c_str();
+#  - platform: uptime
+#    name: "Uptime"
+#    id: sensor_uptime
+#    update_interval: 60s
+#    entity_category: "diagnostic"
+#    internal: true
+#    on_raw_value:
+#     then:
+#        - text_sensor.template.publish:
+#            id: uptime_human
+#            state: !lambda |-
+#              int seconds = round(id(sensor_uptime).raw_state);
+#              int days = seconds / (24 * 3600);
+#              seconds = seconds % (24 * 3600);
+#              int hours = seconds / 3600;
+#              seconds = seconds % 3600;
+#              int minutes = seconds /  60;
+#              seconds = seconds % 60;
+#              return (
+#                (days ? String(days) + "d " : "") +
+#                (hours ? String(hours) + "h " : "") +
+#                (minutes ? String(minutes) + "m " : "") +
+#                (String(seconds) + "s")
+#              ).c_str();
 
 # Provide a pre-built button for restarting the device
 button:
