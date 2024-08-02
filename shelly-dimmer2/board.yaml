@@ -19,7 +19,7 @@ uart:
 # TODO: Figure out which pins; see:
 # https://github.com/esphome/feature-requests/issues/2587
 
-#binary_sensor
+#binary_sensor:
 #
 #  - platform: gpio
 #    pin:
@@ -56,9 +56,9 @@ uart:
 #      number: GPIO14
 #      internal: true
 #      mode: INPUT_PULLUP
-
-  - platform: gpio
-    pin:
-      number: GPIO16
-      internal: true
-      mode: INPUT_PULLUP
+#
+#  - platform: gpio
+#    pin:
+#      number: GPIO16
+#      internal: true
+#      mode: INPUT_PULLUP
